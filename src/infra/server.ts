@@ -1,9 +1,13 @@
-import express from 'express'
+import express from "express";
+import helmet from "helmet";
+import cors from "cors";
 
-const app = express()
+const app = express();
 
-app.use(express.json())
+app.use(express.json());
+app.use(helmet());
+app.use(cors());
 
 export {
   app
-}
+};
